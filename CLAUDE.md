@@ -55,6 +55,26 @@ For multi-step tasks, state a brief plan:
 ```
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
+
+## 5. Check Against Prior Art
+
+**Name the established idea before committing to a load-bearing design decision.**
+
+Scope: decisions that are hard to reverse or that the rest of the system leans on. Not routine code, not one-off scripts. If nothing established bears on the decision, say so in one line and move on.
+
+- **Prefer ideas that survived decades of practice** over recent patterns. Old and proven beats current and popular.
+- **Hunt for prior art that contradicts or complicates the design, not that confirms it.** Confirmation is cheap and rarely changes anything. A precedent that chose the opposite default is worth ten that agree.
+- **Never adopt a design because a well-known system does it.** State where the precedent applies and where it does not — contexts differ, and a good system's right answer is often wrong here.
+
+### Evidence rule
+
+Answering from training is free but leaves no citation and cannot be audited. **Fetch a source when the claim will be written into a file, or acted on. State which you did.**
+
+Orientation ("there is a 1994 paper arguing local ≠ remote") needs no source. Anything that lands in a file — exact quotes, version numbers, API signatures, dates, dependency constraints — does.
+
+### When this conflicts with §2
+
+**§2 wins.** Prior art justifies a decision; it never licenses machinery that wasn't asked for. Citing a pattern is not a reason to build it.
 # graphify
 - **graphify** (`~/.claude/skills/graphify/SKILL.md`) - any input to knowledge graph. Trigger: `/graphify`
 When the user types `/graphify`, use the installed graphify skill or instructions before doing anything else.
